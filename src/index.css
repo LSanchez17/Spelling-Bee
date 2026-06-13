@@ -1,0 +1,88 @@
+/* ── Design tokens ──────────────────────────────────────────── */
+:root {
+  --bg: #fffbf0;
+  --bg-card: #ffffff;
+  --text: #374151;
+  --text-muted: #6b7280;
+  --text-heading: #111827;
+  --border: #e5e7eb;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --passed: #10b981;
+  --passed-bg: #d1fae5;
+  --passed-dark: #059669;
+  --failed: #ef4444;
+  --failed-bg: #fee2e2;
+  --failed-dark: #dc2626;
+  --new: #6366f1;
+  --new-bg: #e0e7ff;
+  --new-dark: #4f46e5;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --radius: 16px;
+  --radius-sm: 8px;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;
+    --bg-card: #1f2937;
+    --text: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-heading: #f9fafb;
+    --border: #374151;
+    --accent: #fbbf24;
+    --accent-dark: #f59e0b;
+    --passed: #34d399;
+    --passed-bg: rgba(52, 211, 153, 0.15);
+    --passed-dark: #10b981;
+    --failed: #f87171;
+    --failed-bg: rgba(248, 113, 113, 0.15);
+    --failed-dark: #ef4444;
+    --new: #818cf8;
+    --new-bg: rgba(129, 140, 248, 0.15);
+    --new-dark: #6366f1;
+  }
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--text-heading);
+  font-weight: 700;
+}
+
+p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
