@@ -1,4 +1,4 @@
-import type { WordEntry } from "../data/dictionary";
+import type { WordEntry } from "../types";
 
 interface WordCardProps {
   entry: WordEntry;
